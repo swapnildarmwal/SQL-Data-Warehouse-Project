@@ -21,7 +21,7 @@ go
 
 --Drop and Recreate the 'datawarehouse' database
 
-If Exists (Select 1 from sys.database where name = 'Datawarehouse')
+If Exists (Select 1 from sys.databases where name = 'Datawarehouse')
 Begin
 	alter database datawarehouse set single_user with rollback immediate;
 	Drop database Datawarehouse;
